@@ -1,0 +1,9 @@
+---
+- name: Run Cohesity Playbooks
+  hosts: all
+  tasks:
+    - name: Include AddVMToProtectionJob playbook
+      import_playbook: cohesity/AddVMToProtectionJob.yml
+
+    - name: Include createProtectionJob playbook
+      import_playbook: cohesity/createProtectionJob.yml
